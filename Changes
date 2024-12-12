@@ -1,4 +1,6 @@
 Revision history for C::Parser
 
 {{$NEXT}}
+
+0.3.3  2024-12-12T14:32:31+01:00
     - Initial version as a Raku Community module

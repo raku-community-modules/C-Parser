@@ -1,5 +1,5 @@
 {
-  "auth": "zef:raku-community-module",
+  "auth": "zef:raku-community-modules",
   "authors": [
     "Andrew Robbins"
   ],
@@ -28,5 +28,5 @@
   ],
   "test-depends": [
   ],
-  "version": "0.3.2"
+  "version": "0.3.3"
 }
