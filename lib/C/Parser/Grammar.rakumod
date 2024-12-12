@@ -1,5 +1,5 @@
 # References ISO/IEC 9899:1990 "Information technology - Programming Language C" (C89 for short)
-use v6;
+
 #use Grammar::Tracer;
 use C::Parser::Lexer;
 use C::Parser::Utils;
@@ -1028,3 +1028,5 @@ rule declaration-list { <declaration>+ }
 rule pragma-operator {
     '_Pragma' '(' <string-constant> ')'
 }
+
+# vim: expandtab shiftwidth=4

@@ -1,4 +1,3 @@
-use v6;
 unit module C::AST::Ops;
 
 enum OpKind is export <
@@ -179,3 +178,5 @@ enum Spec is export <
     wchar
     extension
 >;
+
+# vim: expandtab shiftwidth=4

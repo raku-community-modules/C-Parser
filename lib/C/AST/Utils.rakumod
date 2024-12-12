@@ -1,4 +1,3 @@
-use v6;
 use C::AST;
 unit module C::AST::Utils;
 
@@ -12,12 +11,12 @@ our sub binop_from_lassoc(@operators, @operands) {
         my @children = ($ast, $operand.ast);
         $ast = C::AST::Op.new(:$op, :@children);
     };
-    return $ast;
+    $ast
 }
 
 our sub binop_from_rassoc(@operators, @operands) {
     # TODO
-    return binop_from_lassoc(@operators, @operands);
+    binop_from_lassoc(@operators, @operands)
 }
 
 our sub get_declarator_name(Match $decr --> Str) {
@@ -25,7 +24,7 @@ our sub get_declarator_name(Match $decr --> Str) {
     my Str $name = $ddecr1<declarator> 
         ?? get_declarator_name($ddecr1<declarator>) 
         !! $ddecr1<ident><name>.Str;
-    return $name;
+    $name
 }
 
 our sub synthesize_declarator(
@@ -36,7 +35,7 @@ our sub synthesize_declarator(
     my $ast = C::AST::ExternalOp.new(
         op => TyKind::declarator,
         children => $designator);
-    return $ast;
+    $ast
 }
 
 our sub synthesize_declaration(
@@ -47,12 +46,12 @@ our sub synthesize_declaration(
         type => $specifiers, 
         children => ($declarator,));
     #say $ast.perl;
-    return $ast;
+    $ast
 }
 
 our sub synthesize_init_declarator(
     $value) {
-    return $value;
+    $value
 }
 
 our sub synthesize_init_declaration(
@@ -64,7 +63,7 @@ our sub synthesize_init_declaration(
         type => $specifiers, 
         children => @inits);
     #say $ast.perl;
-    return $ast;
+    $ast
 }
 
 our sub synthesize_struct_declaration(
@@ -76,5 +75,5 @@ our sub synthesize_struct_declaration(
         type => $specifiers, 
         children => @fields);
     #say $ast.perl;
-    return $ast;
+    $ast
 }

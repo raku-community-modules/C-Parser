@@ -1,4 +1,3 @@
-use v6;
 unit module C::Parser::Utils;
 
 our sub fake_indent (Str $input --> Str) {
@@ -38,7 +37,7 @@ our sub fake_indent (Str $input --> Str) {
 }
 
 our sub get_builtin_types() {
-    return qw<<<
+    qw<<<
         __builtin_va_list
         gboolean
         gchar
@@ -200,3 +199,5 @@ our sub get_builtin_types() {
 		quad
     >>>;
 }
+
+# vim: expandtab shiftwidth=4

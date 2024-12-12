@@ -1,5 +1,5 @@
 # References ISO/IEC 9899:1990 "Information technology - Programming Language C" (C89 for short)
-use v6;
+
 #use Grammar::Tracer;
 unit grammar C::Parser::Lexer;
 

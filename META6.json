@@ -1,24 +1,32 @@
 {
-        "perl" : "6.*",
-        "name" : "C::Parser",
-        "version" : "0.3.2",
-	"license" : "LGPL-3.0-or-later",
-        "description" : "Grammar for Parsing C in Perl6",
-        "author" : "Andrew Robbins",
-        "build-depends" : [ ],
-        "test-depends" : [
-                "Test"
-        ],
-        "depends" : [ ],
-        "provides" : {
-                "C::Parser::Lexer" : "lib/C/Parser/Lexer.pm6",
-                "C::Parser::Utils" : "lib/C/Parser/Utils.pm6",
-                "C::Parser::Grammar" : "lib/C/Parser/Grammar.pm6",
-                "C::AST::Ops" : "lib/C/AST/Ops.pm6",
-                "C::AST::Utils" : "lib/C/AST/Utils.pm6",
-                "C::AST" : "lib/C/AST.pm6",
-                "C::Parser::Actions" : "lib/C/Parser/Actions.pm6",
-                "C::Parser" : "lib/C/Parser.pm6"
-        },
-        "source-url" : "https://github.com/andydude/p6-c-parser.git"
+  "auth": "zef:raku-community-module",
+  "authors": [
+    "Andrew Robbins"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Grammar for Parsing C in Raku",
+  "license": "LGPL-3.0-or-later",
+  "name": "C::Parser",
+  "perl": "6.*",
+  "provides": {
+    "C::AST": "lib/C/AST.rakumod",
+    "C::AST::Ops": "lib/C/AST/Ops.rakumod",
+    "C::AST::Utils": "lib/C/AST/Utils.rakumod",
+    "C::Parser": "lib/C/Parser.rakumod",
+    "C::Parser::Actions": "lib/C/Parser/Actions.rakumod",
+    "C::Parser::Grammar": "lib/C/Parser/Grammar.rakumod",
+    "C::Parser::Lexer": "lib/C/Parser/Lexer.rakumod",
+    "C::Parser::Utils": "lib/C/Parser/Utils.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/raku-community-modules/C-Parser.git",
+  "tags": [
+  ],
+  "test-depends": [
+  ],
+  "version": "0.3.2"
 }

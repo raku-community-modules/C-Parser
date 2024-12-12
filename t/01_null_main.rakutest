@@ -1,12 +1,11 @@
-#!/usr/bin/env perl6
-use v6;
 use Test;
-plan 1;
+
 use C::Parser::Grammar;
+
+plan 1;
 
 our $source = q<<<
     int main() {
-        puts("Hello World!");
         return 0;
     }
 >>>;
@@ -15,3 +14,5 @@ our $source = q<<<
     my $match = C::Parser::Grammar.parse($source);
     isa-ok($match, C::Parser::Grammar, 'gives a Grammar');
 }
+
+# vim: expandtab shiftwidth=4

@@ -1,4 +1,3 @@
-use v6;
 use C::AST::Ops;
 unit module C::AST;
 
@@ -65,3 +64,5 @@ class Decl is Arg {
 class TransUnit is Node {
     has External @.children;
 }
+
+# vim: expandtab shiftwidth=4

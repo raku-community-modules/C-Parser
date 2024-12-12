@@ -1,8 +1,8 @@
-use v6;
 use C::AST;
 use C::AST::Ops;
 use C::AST::Utils;
 use C::Parser::Utils;
+
 unit class C::Parser::Actions;
 
 method TOP($/) {
@@ -1097,3 +1097,5 @@ method function-definition:sym<std>($/) {
         type => C::AST::TypeOp.new(:$op, :@children),
         value => $<compound-statement>.ast);
 }
+
+# vim: expandtab shiftwidth=4
