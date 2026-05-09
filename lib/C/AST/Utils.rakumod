@@ -4,7 +4,7 @@ unit module C::AST::Utils;
 our sub binop_from_lassoc(@operators, @operands) {
     my $ast = (shift @operands).ast;
     for @operators Z @operands -> $operator, $operand {
-        if $operator.WHAT.perl ne 'Match' {
+        if $operator.WHAT.raku ne 'Match' {
             die "expected operator to be of type `Match`";
         }
         my $op = $operator.ast;
@@ -45,7 +45,7 @@ our sub synthesize_declaration(
     our $ast = C::AST::Decl.new(
         type => $specifiers, 
         children => ($declarator,));
-    #say $ast.perl;
+    #say $ast.raku;
     $ast
 }
 
@@ -62,7 +62,7 @@ our sub synthesize_init_declaration(
     our $ast = C::AST::Decl.new(
         type => $specifiers, 
         children => @inits);
-    #say $ast.perl;
+    #say $ast.raku;
     $ast
 }
 
@@ -74,6 +74,6 @@ our sub synthesize_struct_declaration(
     our $ast = C::AST::Decl.new(
         type => $specifiers, 
         children => @fields);
-    #say $ast.perl;
+    #say $ast.raku;
     $ast
 }

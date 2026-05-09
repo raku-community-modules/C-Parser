@@ -164,7 +164,7 @@ token offsetof-keyword      { '__builtin_offsetof' }                            
 
 # Standard name: identifier
 # Nonstandard name: ident
-# Rationale: 'ident' is more Perl-ish
+# Rationale: 'ident' is more raku-ish
 token ident {
     <!before <keyword>>
     $<name>=(<.ident-first> <.ident-rest>*)

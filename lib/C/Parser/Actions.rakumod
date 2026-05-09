@@ -703,7 +703,7 @@ method declarator:sym<direct>($/) {
         @children.unshift($ast);
         $ast = C::AST::TypeOp.new(:$op, :@children);
     }
-    #say C::Parser::Utils::fake_indent($ast.perl);
+    #say C::Parser::Utils::fake_indent($ast.raku);
     make $ast;
 }
 
